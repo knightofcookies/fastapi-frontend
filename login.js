@@ -10,7 +10,7 @@ loginButton.addEventListener("click", (e) => {
     login(email, password);
 });
 
-const base_url = "https://reqres.in/api";
+const base_url = "http://127.0.0.1:8000";
 const endpoint = "login";
 
 async function login(email, password) {
@@ -18,24 +18,25 @@ async function login(email, password) {
         email: email,
         password: password
     };
+    const data = new FormData();
+    data.append("username", email);
+    data.append("password", password);
     fetch(`${base_url}/${endpoint}`, {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify(credentials)
+        body: data,
     }).then((response) => {
         if (response.ok) {
-            json = response.json();
-            token = json.token;
-            console.log(token);
+            json = response.json().then((json) => {
+                var now = new Date();
+                now.setTime(now.getTime() + 1 * 3600 * 1000);
+                document.cookie = `access_token=${json.access_token}; expires=${now.toUTCString()};`
+            });
         }
         else {
-            errorArea.textContent = "HTTP-Error: " + response.status +" ";
-            return response.text().then(text => {throw new Error(text)});
+            errorArea.textContent = "HTTP-Error: " + response.status + " ";
+            return response.text().then(text => { throw new Error(text) });
         }
     }).catch((e) => {
-        console.log(e);
         errorArea.textContent += e;
     });
 }
