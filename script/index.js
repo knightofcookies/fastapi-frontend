@@ -33,6 +33,7 @@ async function checkCredentials() {
 function showLoggedInStatus() {
     const logoutLink = document.createElement("a");
     logoutLink.textContent = "Logout";
+    logoutLink.href = "index.html";
     logoutLink.className = "auth-redirect";
     logoutLink.addEventListener("click", (event) => {
         event.preventDefault();
