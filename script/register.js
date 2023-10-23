@@ -29,7 +29,7 @@ async function checkCredentials() {
     if (access_token === null) {
         return false;
     }
-    return fetch(`${base_url}/posts?limit=1`, {
+    return fetch(`${base_url}/login`, {
         method: 'GET',
         headers: {
             "Authorization": `Bearer ${access_token}`,
