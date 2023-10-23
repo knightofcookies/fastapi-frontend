@@ -1,0 +1,11 @@
+#register-button {
+    background-color: rgb(31, 194, 194);
+    border-radius: 0.2em;
+    border-width: thin;
+    font-size: 1.119em;
+    width: 5em;
+    height: 1.9em;
+    border-color: rgb(31, 194, 194);
+    color: white;
+    font-family: sans-serif;
+}

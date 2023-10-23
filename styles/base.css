@@ -1,0 +1,71 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(40, 42, 61);
+    display: grid;
+    grid-auto-flow: row;
+    color: white;
+}
+
+#navbar {
+    width: 100 vw;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    background-color: rgb(31, 194, 194);
+    height: 10vh;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.navbar-title {
+    font-family: "Gill Sans Extrabold", sans-serif;
+    font-weight: bolder;
+    font-size: 1.66vw;
+    width: 20vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dummy {
+    width: 50vw;
+}
+
+.auth {
+    height: 100%;
+    width: 30vw;
+    font-weight: normal;
+    font-family: "Verdanta", sans-serif;
+    font-size: 1.4vw;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.auth-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-redirect {
+    font-size: 1.25vw;
+    text-decoration: underline;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.body-area {
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

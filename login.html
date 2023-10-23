@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/auth.css">
+  <link rel="stylesheet" href="styles/login.css">
   <title>Blog | Login</title>
 </head>
 
@@ -17,7 +19,7 @@
     <div class="dummy"></div>
     <div class="auth">
       <div class="auth-element">
-        <a class="auth-redirect" href="register.html">Don't have an account? Register</a>
+        <a class="auth-redirect" id="register-redirect" href="register.html">Don't have an account? Register</a>
       </div>
     </div>
   </div>
@@ -26,8 +28,8 @@
       <div class="user-brand">
         <h2>Login</h2>
       </div>
-      <form>
-        <div class="credentials">
+      <form id="login-form">
+        <div class="credentials" id="credentials-div">
           <div class="credential-element">
             <input type="email" name="email" size="30" maxlength="60" autocomplete="email" autofocus="true"
               placeholder="Email" id="email" required />
@@ -37,7 +39,7 @@
               placeholder="Password" id="password" required />
           </div>
           <div class="credential-element">
-            <button type="submit" name="button" id="login-button">
+            <button type="submit" name="button" id="login-button" class="auth-button">
               Login
             </button>
           </div>
@@ -50,7 +52,7 @@
       </form>
     </div>
   </div>
-  <script src="login.js"></script>
+  <script src="script/login.js"></script>
 </body>
 
 </html>
