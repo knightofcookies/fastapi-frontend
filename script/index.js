@@ -33,6 +33,7 @@ async function checkCredentials() {
 function showLoggedInStatus() {
     const newAuthDiv = document.createElement("div");
     const oldAuthDiv = document.getElementById("auth");
+    newAuthDiv.className = oldAuthDiv.className;
     const logoutLink = document.createElement("a");
     logoutLink.textContent = "Logout";
     logoutLink.className = "auth-redirect";
