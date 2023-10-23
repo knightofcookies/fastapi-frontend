@@ -33,6 +33,7 @@ function showLoggedInStatus() {
     const oldAuthDiv = document.getElementById("auth");
     const logoutLink = document.createElement("a");
     logoutLink.textContent = "Logout";
+    logoutLink.className = "auth-redirect";
     logoutLink.addEventListener("click", (event) => {
         event.preventDefault();
         logout();
