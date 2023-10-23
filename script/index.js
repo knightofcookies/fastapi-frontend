@@ -37,7 +37,7 @@ function showLoggedInStatus() {
         event.preventDefault();
         logout();
     });
-
+    newAuthDiv.appendChild(logoutLink);
     oldAuthDiv.replaceWith(newAuthDiv);
 }
 
