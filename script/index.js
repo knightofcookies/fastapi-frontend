@@ -31,9 +31,6 @@ async function checkCredentials() {
 }
 
 function showLoggedInStatus() {
-    const newAuthDiv = document.createElement("div");
-    const oldAuthDiv = document.getElementById("auth");
-    newAuthDiv.className = oldAuthDiv.className;
     const logoutLink = document.createElement("a");
     logoutLink.textContent = "Logout";
     logoutLink.className = "auth-redirect";
@@ -41,7 +38,17 @@ function showLoggedInStatus() {
         event.preventDefault();
         logout();
     });
-    newAuthDiv.appendChild(logoutLink);
+
+    const logoutDiv = document.createElement("div");
+    logoutDiv.className = "auth-element";
+    logoutDiv.appendChild(logoutLink);
+
+    
+    const newAuthDiv = document.createElement("div");
+    newAuthDiv.className = "auth";
+    newAuthDiv.appendChild(logoutDiv);
+
+    const oldAuthDiv = document.getElementById("auth");
     oldAuthDiv.replaceWith(newAuthDiv);
 }
 
