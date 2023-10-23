@@ -6,6 +6,8 @@ addEventListener("DOMContentLoaded", (event) => {
     }).catch(console.log);
 });
 
+const base_url = "http://127.0.0.1:8000";
+
 async function checkCredentials() {
     const access_token = localStorage.getItem("access_token");
     if (access_token === null) {
